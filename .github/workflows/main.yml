@@ -17,6 +17,7 @@ jobs:
                 run: |
                     make cheatsheet
                     make pdf
+                    make weekly
           - name: Upload cheatsheet.pdf file 
             uses: actions/upload-artifact@v3
             with:
@@ -27,3 +28,8 @@ jobs:
             with:
               name: document.pdf
               path: document.pdf
+          - name: Upload weekly_log.pdf file 
+            uses: actions/upload-artifact@v3
+            with:
+              name: weekly_logdemo.pdf
+              path: weekly_log.pdf
